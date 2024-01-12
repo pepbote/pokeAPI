@@ -1,0 +1,119 @@
+body {
+    padding: 10px;
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 5px groove rgb(254, 195, 122);
+}
+
+h1 {
+    margin-bottom: 10px; 
+    color:rgb(254, 195, 122);
+    text-shadow: 2px 2px 4px antiquewhite;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    margin-bottom: 10px;
+}
+
+form label {
+    margin-right: 10px; 
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(247, 228, 205);
+    border-radius: 10px;
+    background-color: antiquewhite;
+    box-shadow: 5px 5px 10px antiquewhite;
+    padding: 20px 15px;
+    margin-top: 30px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid rgb(255, 207, 143);
+    border-radius: 7px;
+    box-shadow: 5px 5px 5px rgb(251, 191, 114), 
+                -5px -5px 5px rgb(251, 191, 114),
+                -5px 5px 5px rgb(251, 191, 114),
+                5px -5px 5px rgb(251, 191, 114);
+    height: 220px;
+    width: 180px;
+    margin: 10px; 
+    transition: height 0.3s, width 0.3s;
+}
+
+.card:hover.hover, .selected {
+    height: 250px;
+    width: 210px;
+    border: 2px solid red;
+    box-shadow: 5px 5px 5px red, 
+                -5px -5px 5px red,
+                -5px 5px 5px red,
+                5px -5px 5px red;
+    transition: height 0.3s, width 0.3s, box-shadow 0.3s, border 0.3s;
+    cursor: pointer; 
+}
+
+.card .img {
+    height: 15vh;
+    width: auto;
+    margin: 2vh 0;
+}
+
+.card p {
+    margin: 0;
+    padding: 0;
+}
+
+.card .name {
+    margin-top: 2vh;
+}
+
+#result {
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    border: 2px solid rgb(247, 228, 205);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px antiquewhite;
+    background-color: antiquewhite;
+    padding: 10px;
+} 
+
+#submit {
+    cursor: pointer;
+}
+
+.winner {
+    height: 250px;
+    width: 210px;
+    border: 2px solid green;
+    box-shadow: 5px 5px 5px green, 
+                -5px -5px 5px green,
+                -5px 5px 5px green,
+                5px -5px 5px green;
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 100%; 
+        margin: 10px 0; 
+    }
+}
